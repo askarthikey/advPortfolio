@@ -1,0 +1,32 @@
+.education {
+    background: linear-gradient(135deg, #111, #222);
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .education h2 {
+    color: white;
+  }
+  
+  .education-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .edu-card {
+    background: #333;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 250px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .edu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  

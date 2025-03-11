@@ -1,0 +1,45 @@
+.projects {
+    background: linear-gradient(135deg, #111, #222);
+    padding: 50px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .projects h2 {
+    color: white;
+  }
+  
+  .project-scroll {
+    display: flex;
+    gap: 0; /* No gap between scrolling elements */
+    white-space: nowrap;
+    width: max-content;
+  }
+  
+  .project-card {
+    background: #333;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 250px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-right: 10px;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .project-card a {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  .project-card a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  

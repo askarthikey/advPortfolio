@@ -1,0 +1,303 @@
+/* Global Theme */
+:root {
+    --primary-color: #fff;
+    --secondary-color: #ccc;
+    --background-dark: #000;
+    --gray-dark: #111;
+    --gray-light: #222;
+  }
+  
+  /* Global Styles */
+  body {
+    background-color: var(--background-dark);
+    color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--gray-dark);
+    padding: 15px;
+    z-index: 100;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Push Main Content Below Navbar */
+  main {
+    margin-top: 80px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 100px;
+    background: var(--gray-dark);
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 10;
+  }
+  
+  .sidebar img {
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  .sidebar a {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .sidebar a:hover {
+    background: var(--gray-light);
+  }
+  
+  /* Home Section */
+  .home {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gray-dark), var(--gray-light));
+  }
+  
+  .home h1 {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .home p {
+    color: grey;
+    font-size: 1.2rem;
+  }
+  
+  .large-photo {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .large-photo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* About Section */
+  .about {
+    background: linear-gradient(135deg, var(--gray-dark), var(--gray-light));
+    padding: 50px;
+    border-radius: 10px;
+  }
+  
+  /* Education Section */
+  .education {
+    background: linear-gradient(135deg, var(--gray-dark), var(--gray-light));
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .education-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .edu-card {
+    background: var(--gray-light);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 250px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .edu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Projects Section (Infinite Scroll) */
+  .projects {
+    background: linear-gradient(135deg, var(--gray-dark), var(--gray-light));
+    padding: 50px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .projects h2 {
+    color: white;
+  }
+  
+  .project-scroll {
+    display: flex;
+    gap: 0;
+    white-space: nowrap;
+    width: max-content;
+  }
+  
+  .project-card {
+    background: var(--gray-light);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 250px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-right: 10px;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .project-card a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  .project-card a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* Certifications Section */
+  .certifications {
+    background: linear-gradient(135deg, var(--gray-dark), var(--gray-light));
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .certificates-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .certificate-card {
+    background: var(--gray-light);
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+  }
+  
+  .certificate-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .certificate-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .certificate-popup iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+  }
+  
+  .certificate-popup button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .certificate-popup button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Contact Section */
+  .contact {
+    background: linear-gradient(135deg, var(--gray-dark), var(--gray-light));
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .contact-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .contact-item p, .contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-item svg {
+    color: var(--secondary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
